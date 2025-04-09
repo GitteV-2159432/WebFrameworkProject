@@ -1,0 +1,77 @@
+Atlas atlas-r77awl-shard-0 [primary] MongoDB-assignment> db.books.insertOne({title: 'Doctor on the Brain', author: 'Gordon, Richard',
+...     genre: 'Fiction',
+...     pages: 204,})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67f67ebeb9b36b2cc0b5f89a')
+}
+
+
+Atlas atlas-r77awl-shard-0 [primary] MongoDB-assignment> db.books.deleteOne({title: 'The Great Gatsby'})
+{ acknowledged: true, deletedCount: 1 }
+
+
+Atlas atlas-r77awl-shard-0 [primary] MongoDB-assignment> db.books.find()
+[
+  {
+    _id: ObjectId('67f677fe78ea688c8060cf7e'),
+    title: 'Fundamentals of Wavelets',
+    author: 'Goswami, Jaideva',
+    genre: 'Computer Science',
+    publisher: 'Wiley',
+    pages: 228,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f6782f24e592b67f3976c5'),
+    title: 'Superfreakonomics',
+    author: 'Dubner, Stephen',
+    genre: 'Economics',
+    publisher: 'HarperCollins',
+    pages: 179,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f67856f8dad4b926b753cf'),
+    title: 'Integration of the Indian States',
+    author: 'Menon, V P',
+    genre: 'History',
+    publisher: 'Orient Blackswan',
+    pages: 217,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f6788ce6de6282fe045026'),
+    title: 'Jurassic Park',
+    author: 'Crichton, Michael',
+    genre: 'Fiction',
+    publisher: 'Random House',
+    pages: 174,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f679403f1b2e482dd4b09b'),
+    title: 'On Education',
+    author: 'Russell, Bertrand',
+    genre: 'Philosophy',
+    publisher: 'Routledge',
+    pages: 203,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f6796d39a49ca097eecb98'),
+    title: 'To Sir With Love',
+    author: 'Braithwaite',
+    genre: 'Fiction',
+    publisher: 'Penguin Books',
+    pages: 197,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f67ebeb9b36b2cc0b5f89a'),
+    title: 'Doctor on the Brain',
+    author: 'Gordon, Richard',
+    genre: 'Fiction',
+    pages: 204
+  }
+]

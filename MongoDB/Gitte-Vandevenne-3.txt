@@ -1,0 +1,28 @@
+Atlas atlas-r77awl-shard-0 [primary] MongoDB-assignment> db.books.find({genre: 'Fiction'})
+[
+  {
+    _id: ObjectId('67f6788ce6de6282fe045026'),
+    title: 'Jurassic Park',
+    author: 'Crichton, Michael',
+    genre: 'Fiction',
+    publisher: 'Random House',
+    pages: 174,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f6796d39a49ca097eecb98'),
+    title: 'To Sir With Love',
+    author: 'Braithwaite',
+    genre: 'Fiction',
+    publisher: 'Penguin Books',
+    pages: 197,
+    __v: 0
+  },
+  {
+    _id: ObjectId('67f67ebeb9b36b2cc0b5f89a'),
+    title: 'Doctor on the Brain',
+    author: 'Gordon, Richard',
+    genre: 'Fiction',
+    pages: 204
+  }
+]
