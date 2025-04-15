@@ -1,0 +1,21 @@
+<h1>Product List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Available</th>
+        <th>Date Added</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>€{{this.price}}</td>
+        <td>{{isAvailable this.available}}</td>
+        <td>{{formatDate this.dateAdded}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
