@@ -51,12 +51,14 @@ app.get('/products/:id', (req, res) => {
 
 app.post('/products', (req, res) => {
     const { name, price, available, dateAdded } = req.body;
+    const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
+
     const newProduct = {
-        id: products.length + 1,
+        id: newId,
         name,
         price: parseFloat(price),
         available: available === 'true',
-        dateAdded
+        dateAdded: new Date(dateAdded)
     };
     products.push(newProduct);
     res.status(201).json(newProduct);
@@ -89,7 +91,7 @@ app.delete('/products/:id', (req, res) => {
 app.use(express.static('public'));
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
